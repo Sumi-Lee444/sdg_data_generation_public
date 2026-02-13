@@ -1,0 +1,12 @@
+dataset_names:
+  - process_safety_obs
+
+feature_type:
+  - rule
+  - var
+
+feature_value_metadata:
+  flag: str
+  value: str
+  frequency: float
+

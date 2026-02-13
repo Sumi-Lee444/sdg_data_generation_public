@@ -1,0 +1,36 @@
+[project]
+name = "sdg-data-generate"
+version = "0.1.0"
+description = "Generate synthetic text data using LLM."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "duckdb>=1.4.2",
+    "ipykernel>=7.0.1",
+    "jinja2>=3.1.6",
+    "openai>=2.6.1",
+    "pandas>=2.3.3",
+    "pyyaml>=6.0.3",
+    "requests>=2.32.5",
+    "scikit-learn>=1.7.2",
+    "sentence-transformers>=5.1.2",
+]
+
+[build-system]
+requires = ["setuptools>=42.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv.sources]
+sdg-utils = { path = "../sdg_utils", editable = true }
+
+[tool.ruff]
+target-version = "py312"
+line-length = 79
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "N", "C4"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.6",
+]

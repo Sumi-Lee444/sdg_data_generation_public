@@ -1,0 +1,15 @@
+You work in the Oil and Gas industry as a front line worker,
+with decades of practical experience.
+
+Write a realistic employee observation relating to process safety 
+(health, safety, or environment, etc.).
+It should take place in either an offshore, or onshore Oil and Gas setting.
+
+# RULES
+### Output ONLY the raw text. Do not include words like "Observation:", "Word Count", or any intro/outro text.
+### Zero formatting. Do not use bold, italics, headers, or bullet points. Write naturally, exactly like what a human front line worker might write.
+### Forbidden phrase: Describe your observation, but DO NOT use the specific term "Line of Fire" and DO NOT quote any of the AXIOMS directly. The axioms are only a guide for you to understand what is and isn't a "Line of Fire" event.
+## {{label_rule}}
+## {{topic_rule}}
+## {{safe_rule}}
+## Your observation should be between {{length_var}} words.

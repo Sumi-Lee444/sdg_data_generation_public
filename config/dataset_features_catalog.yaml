@@ -1,0 +1,54 @@
+process_safety_obs:
+  rule:
+    # ---- TARGET LABEL ----
+    - label:
+      - flag: 1
+        value: >
+         Generate a 'Line of Fire' observation.
+        frequency: 1
+      - flag: 0
+        value: >
+         Generate a NON-'Line of Fire' observation.
+        frequency: 0
+    # ---- SAFETY ----
+    - safe:
+      - flag: 1
+        value: >
+         Safe observation.
+        frequency: 0.35
+      - flag: 0
+        value: >
+         Unsafe observation.
+        frequency: 0.65
+    # ---- TOPIC ----
+    - topic: 
+      - flag: pdo_uncontroll_motion
+        value: >
+         Observation should relate to Potential dropped objects (PDO).
+        frequency: 0.25
+      - flag: pressure_release 
+        value: >
+         Observation must focus strictly on Stored Energy, Pressure, or Electrical hazards (e.g., tensioned lines, spring-loaded devices, or pressurized systems).
+        frequency: 0.25
+      - flag: barriers
+        value: >
+         Observation should relate to the use of barriers.
+        frequency: 0.25
+      - flag: human_factors
+        value: > 
+         Observation must center around the human side of work, including working culture, interpersonal interactions, communication quality.
+        frequency: 0.25
+  var:
+    - length: 
+      - flag: very_short
+        value: "5-15"
+        frequency: 0.28
+      - flag: short
+        value: "15-40"
+        frequency: 0.29
+      - flag: medium
+        value: "35-50"
+        frequency: 0.28
+      - flag: long
+        value: "50-80"
+        frequency: 0.15
